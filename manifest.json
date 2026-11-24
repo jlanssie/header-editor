@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "ModHTTP Header Editor",
+  "name": "MAG-314 Header Editor",
   "version": "1.0.0",
   "description": "Modify HTTP request & response headers.",
   "icons": {
