@@ -1,11 +1,170 @@
 :root {
-  --background-color: #fff;
-  --text-color: #000;
-  --accent: #714099ff;
+  --accent: #714099;
+  --accent-hover: #5d3280;
+  --accent-soft: #7140991a;
+  --accent-ring: #7140994d;
+
+  --bg: #ffffff;
+  --surface: #f8f7fa;
+  --border: #e2dfea;
+  --text: #1c1922;
+  --text-muted: #686275;
+  --danger: #b42318;
+  --danger-soft: #b4231814;
+
+  --radius: 8px;
+  --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-  width: 800px;
-  color: var(--text-color);
-  background: var(--background-color);
+  margin: 0;
+  padding: 14px;
+  width: 380px;
+  font-family: var(--font);
+  font-size: 13px;
+  color: var(--text);
+  background: var(--bg);
+}
+
+h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+#requestModifiersList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rule-item {
+  display: grid;
+  grid-template-columns: 20px 1fr 28px;
+  grid-template-areas:
+    "enabled url remove"
+    "enabled name remove"
+    "enabled value remove";
+  align-items: center;
+  gap: 6px 8px;
+  padding: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.rule-enabled {
+  grid-area: enabled;
+  align-self: start;
+  margin: 6px 0 0;
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.rule-url {
+  grid-area: url;
+}
+
+.rule-header-name {
+  grid-area: name;
+}
+
+.rule-header-value {
+  grid-area: value;
+}
+
+.rule-remove {
+  grid-area: remove;
+  align-self: start;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.rule-remove:hover {
+  color: var(--danger);
+  background: var(--danger-soft);
+}
+
+.rule-item input[type="text"] {
+  width: 100%;
+  min-width: 0;
+  padding: 6px 8px;
+  font-family: inherit;
+  font-size: 12px;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.rule-item input[type="text"]::placeholder {
+  color: var(--text-muted);
+}
+
+.rule-item input[type="text"]:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-ring);
+}
+
+#addRequestModifierBtn {
+  margin-top: 8px;
+  width: 100%;
+  padding: 6px 10px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px dashed var(--accent);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+#addRequestModifierBtn:hover {
+  background: var(--accent-ring);
+}
+
+#saveBtn {
+  margin-top: 12px;
+  width: 100%;
+  padding: 8px 12px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+#saveBtn:hover {
+  background: var(--accent-hover);
+}
+
+#saveBtn:active {
+  transform: translateY(1px);
 }
