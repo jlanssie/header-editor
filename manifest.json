@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "ModHTTP",
+  "version": "0.0.1",
+  "description": "Modify HTTP requests and headers.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["declarativeNetRequest", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Modify HTTP requests & responses"
+  }
+}

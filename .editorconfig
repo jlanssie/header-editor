@@ -17,7 +17,7 @@ cpp_set_brace_wrapping_before_else = false
 indent_size = 4
 max_line_length = 200
 
-[{*.js,*.ts,*.jsx,*.tsx,*.json,*.scss,*.css,*.svelte}]
+[{*.js,*.ts,*.jsx,*.tsx,*.json,*.scss,*.css,*.astro}]
 max_line_length = 125
 
 [*.sql]

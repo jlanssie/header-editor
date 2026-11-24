@@ -1,14 +1,21 @@
-# Template
+# ModHTTP
 
-A repository template for creating new projects.
+A Chrome extension to modify HTTP requests & responses
 
 ## Installation
 
-This is a template repository and cannot be installed.
+Install from the Chrome Web Store.
 
 ## Usage
 
 Select this repository as a template when creating a new GitHub repository.
+
+## Developing
+
+- Open Chrome and go to chrome://extensions. 
+- Toggle Developer mode on (top-right).
+- Click Load unpacked and select your `modhttp/` directory.
+- Open DevTools (F12 -> Network tab) on a matching page to verify your headers or redirects. Whenever you edit files, click the Reload icon on the extension card.
 
 ## Contributing
 
