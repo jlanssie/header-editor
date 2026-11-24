@@ -1,3 +1,5 @@
+![Header modifier icon](icons/icon.svg)
+
 # Header Editor
 
 A Chrome extension to modify HTTP requests & responses
