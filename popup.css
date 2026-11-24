@@ -13,7 +13,6 @@
   --danger-soft: #b4231814;
 
   --radius: 8px;
-  --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 * {
@@ -24,7 +23,7 @@ body {
   margin: 0;
   padding: 14px;
   width: 380px;
-  font-family: var(--font);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 13px;
   color: var(--text);
   background: var(--bg);
