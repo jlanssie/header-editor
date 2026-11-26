@@ -159,6 +159,10 @@ async function syncDeclarativeNetRequest(rules) {
  */
 async function loadRules() {
   try {
+    if (!chrome.storage?.local) {
+      renderRules([]);
+      return;
+    }
     const result = await chrome.storage.local.get(STORAGE_KEY);
     renderRules(result[STORAGE_KEY]);
   } catch (err) {

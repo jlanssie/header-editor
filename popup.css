@@ -1,4 +1,6 @@
 :root {
+  color-scheme: light;
+
   --accent: #714099;
   --accent-hover: #5d3280;
   --accent-soft: #7140991a;
@@ -15,7 +17,28 @@
   --radius: 8px;
 }
 
-* {
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --accent: #9b68c9;
+    --accent-hover: #b082db;
+    --accent-soft: #9b68c926;
+    --accent-ring: #9b68c959;
+
+    --bg: #141218;
+    --surface: #1e1b24;
+    --border: #2f2a3b;
+    --text: #f3effa;
+    --text-muted: #a49cb5;
+    --danger: #f04438;
+    --danger-soft: #f0443824;
+  }
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -81,7 +104,7 @@ h2 {
   font-weight: 500;
   color: var(--text);
   background-color: var(--bg);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23686275' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23a49cb5' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 10px center;
   appearance: none;
