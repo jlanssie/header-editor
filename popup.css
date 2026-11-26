@@ -1,10 +1,21 @@
 :root {
   color-scheme: light;
 
-  --accent: #714099;
-  --accent-hover: #5d3280;
-  --accent-soft: #7140991a;
-  --accent-ring: #7140994d;
+  --orange-65: #e0531f;
+  --orange-60: #e05320;
+  --orange-55: #ff6c37;
+  --orange-50: #ff6c37;
+  --orange-40: #ff8e64;
+  --orange-30: #ffb091;
+  --orange-20: #ffd1be;
+  --orange-15: #fcdecf;
+  --orange-12: #fff2eb;
+  --orange-10: #fff1eb;
+
+  --accent: var(--orange-55);
+  --accent-hover: var(--orange-65);
+  --accent-soft: var(--orange-12);
+  --accent-ring: rgba(255, 108, 55, 0.3);
 
   --bg: #ffffff;
   --surface: #f8f7fa;
@@ -21,10 +32,10 @@
   :root {
     color-scheme: dark;
 
-    --accent: #9b68c9;
-    --accent-hover: #b082db;
-    --accent-soft: #9b68c926;
-    --accent-ring: #9b68c959;
+    --accent: var(--orange-50);
+    --accent-hover: var(--orange-40);
+    --accent-soft: rgba(255, 108, 55, 0.16);
+    --accent-ring: rgba(255, 142, 100, 0.34);
 
     --bg: #141218;
     --surface: #1e1b24;
@@ -184,16 +195,17 @@ h2 {
   font-family: inherit;
   font-size: 14px;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--accent-hover);
   background: var(--accent-soft);
   border: 1px dashed var(--accent);
   border-radius: var(--radius);
   cursor: pointer;
-  transition: background 0.15s ease;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
 #addRequestModifierBtn:hover {
-  background: var(--accent-ring);
+  background: var(--orange-15);
+  border-color: var(--accent-hover);
 }
 
 #saveBtn {
@@ -217,4 +229,15 @@ h2 {
 
 #saveBtn:active {
   transform: translateY(1px);
+}
+
+@media (prefers-color-scheme: dark) {
+  #addRequestModifierBtn {
+    color: var(--orange-30);
+  }
+
+  #addRequestModifierBtn:hover {
+    background: rgba(255, 108, 55, 0.24);
+    border-color: var(--orange-40);
+  }
 }
