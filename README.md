@@ -2,7 +2,7 @@
 
 # Header Editor
 
-A Chrome extension to modify HTTP requests & responses
+A Chrome extension to modify HTTP requests & responses.
 
 ## Installation
 
